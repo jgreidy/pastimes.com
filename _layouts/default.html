@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{{ page.title }}</title>
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+     <link href='http://fonts.googleapis.com/css?family=ZCOOL+XiaoWei:400,300,700' rel='stylesheet' type='text/css'>
+     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,300,700' rel='stylesheet' type='text/css'>
+
+    {% include json-ld.html %}
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ site.baseurl }}/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ site.baseurl }}/css/small-business.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=141880232586782&autoLogAppEvents=1';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand pastimes-brand" href="#">Pastimes Antiques</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+              </a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/#contact">Contact</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/#buying">Buying</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/#gallery">Gallery</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Heading Row -->
+      <div class="row my-5">
+        <!-- /.col-lg-8 -->
+        <div class="col-lg-4">
+          <h1 class="pastimes-brand">Pastimes Antiques</h1>
+          <p>Located in the historic Dewitt Building in Ithaca, NY since 1979, Pastimes is a small, colorful shop that's packed with an assortment of fun, affordable antiques and collectibles.</p>
+          <p>We specialize in quality vintage jewelry, vinatge clothes and textiles, turn-of-the century postcards, antique buttons, beads, photography, framed art, political buttons, vinyl records, and paper ephemera. We also carry small furniture, glassware and other household items, bakelite, advertising tins, oddments and curiousities.</p>
+              <div>
+                <address>
+                <strong>Pastimes at DeWitt Mall</strong><br />
+                215 North Cayuga Street<br />
+                Ithaca, NY 14850<br />
+                <abbr title="Phone">P:</abbr>(607) 277-3457
+                </address>
+                <p><a href="https://www.google.com/maps/place/Pastimes/@42.440872,-76.5009907,17z/data=!3m1!4b1!4m5!3m4!1s0x89d0819cc771239f:0xa7f3bfb814d11e6e!8m2!3d42.440872!4d-76.498802" title="map and directions to Pastimes">Map and Directions</a></p>
+              </div>
+              <div>
+                <strong>Hours:</strong>
+                    <p>Monday - Saturday: 10:00-5:30<br />Sunday (December only): 11:00-3:00</p>
+              </div>
+              <div>
+            <a id="contact"></a>
+            <h2>Contact:</h2>
+                <p> We welcome your comments and questions! Please feel free to <a href="mailto:mail@pastimes.com?subject=Contacting Pastimes&nbsp;Antiques via Web Site&body=Thanks for contacting Pastimes Antiques!">contact us by email</a>
+                    or call us during business hours at (607)-277-3457.</p>
+
+                <a href="https://www.facebook.com/PastimesIthaca/" title="go to Pastimes on Facebook" ><img src="{{ site.baseurl }}/assets/img/facebook-20.png" alt="facebook icon">&nbsp;Visit our Facebook page.</a>
+
+                <div class="fb-like" data-href="https://www.facebook.com/PastimesIthaca/" data-layout="button" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+              </div>
+            </div>
+        <!-- /.col-md-4 -->
+        <div class="col-lg-8">
+            {% include im-musicians.html %}
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <!-- Call to Action Well
+      <div class="card text-white bg-secondary my-4 text-center">
+        <div class="card-body">
+          <p class="text-white m-0">{{ site.description }}
+          </p>
+        </div>
+      </div>
+       -->
+
+      <!-- Content Row -->
+          <a id="buying"></a>
+          <h2 class="card-title">Buying</h2>
+          {% include buying.html %}
+        <!-- /.col-md-4 -->
+
+      <!-- /.row -->
+
+
+      <div class="mt-3">
+        <a id="gallery"></a>
+        <h2>Gallery</h2>
+        {% include image-gallery.html folder="/assets/pastimes-photos/original" %}
+      </div>
+
+    </div>
+    <!-- /.container -->
+
+
+
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Pastimes 2019</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    {% include lightbox.html %}
+ </body>
+
+</html>

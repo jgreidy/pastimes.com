@@ -1,0 +1,32 @@
+.current {
+  color:green;
+}
+
+/**
+jgr font override
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,300,700)
+@import url(https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei:400,300,700)
+*/
+
+body {
+  font-family: 'Montserrat', sans-serif !important;
+}
+h1,h2 {
+  font-family: 'ZCOOL XiaoWei', serif !important;
+}
+.navbar-brand, .navbar-nav {
+  font-family: 'ZCOOL XiaoWei', serif !important;
+}
+
+// For modern browsers, just add the CSS3 :target selector to the page.
+// This will apply to all the anchors automatically.
+// ref: http://stackoverflow.com/a/21707103/6220029
+// http://darktef.github.io/posts/2017-03-offset-html-anchors-for-fixed-header-with-css
+// for use with anchor <a id='contact></a>
+
+:target {
+  display: block;
+  position: relative;
+  top: -60px;
+  visibility: hidden;
+}
