@@ -114,18 +114,22 @@
        -->
 
       <!-- Content Row -->
-          <a id="buying"></a>
-          <h2 class="card-title">Buying</h2>
-          {% include buying.html %}
+      <div class="row my-5">
+          <div class="col-lg-4">
+            <a id="buying"></a>
+            <h2 class="card-title">We Buy</h2>
+            {% include buying.html %}
+          </div>
         <!-- /.col-md-4 -->
 
       <!-- /.row -->
 
 
-      <div class="mt-3">
+      <div class="col-lg-8">
         <a id="gallery"></a>
         <h2>Gallery</h2>
         {% include image-gallery.html folder="/assets/pastimes-photos/original" %}
+      </div>
       </div>
 
     </div>
