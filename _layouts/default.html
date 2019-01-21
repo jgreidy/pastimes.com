@@ -38,7 +38,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand pastimes-brand" href="#">Pastimes Antiques</a>
+        <a class="navbar-brand pastimes-brand" href="#">Pastimes</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -52,7 +52,7 @@
               <a class="nav-link" href="{{ site.baseurl }}/#contact">Contact</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="{{ site.baseurl }}/#buying">Buying</a>
+              <a class="nav-link" href="{{ site.baseurl }}/#buying">We Buy</a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="{{ site.baseurl }}/#gallery">Gallery</a>
@@ -69,27 +69,28 @@
       <div class="row my-5">
         <!-- /.col-lg-8 -->
         <div class="col-lg-4">
-          <h1 class="pastimes-brand">Pastimes Antiques</h1>
-          <p>Located in the historic Dewitt Building in Ithaca, NY since 1979, Pastimes is a small, colorful shop that's packed with an assortment of fun, affordable antiques and collectibles.</p>
-          <p>We specialize in quality vintage jewelry, vinatge clothes and textiles, turn-of-the century postcards, antique buttons, beads, photography, framed art, political buttons, vinyl records, and paper ephemera. We also carry small furniture, glassware and other household items, bakelite, advertising tins, oddments and curiousities.</p>
-              <div>
+          <h1 class="pastimes-brand">Pastimes</h1>
+          <p>Pastimes is a small, colorful shop packed with an ever-changing array of useful and beautiful vintage and antique items.</p>
+          <p>We specialize in antique and vintage jewelry, clothing, art, textiles, ephemera, and early postcards. We also carry early buttons, beads, antique photographs, silver, pins and medals, vinyl records, toys, furniture, glassware, other household items, and various unexpected oddments and curiosities.</p>
+          <p>Pastimes is located in downtown Ithaca in <a href="http://www.thedewittmall.com/" alt="Dewitt Mall web site">The Dewitt Mall</a>, a historic building that houses two great restaurants and a variety of unique shopping venues.</p>
+          <div>
                 <address>
-                <strong>Pastimes at DeWitt Mall</strong><br />
+                <strong>Address:</strong><br />
+                <a href="http://www.thedewittmall.com/" alt="Dewitt Mall web site">Dewitt Mall</a><br />
                 215 North Cayuga Street<br />
                 Ithaca, NY 14850<br />
-                <abbr title="Phone">P:</abbr>(607) 277-3457
                 </address>
                 <p><a href="https://www.google.com/maps/place/Pastimes/@42.440872,-76.5009907,17z/data=!3m1!4b1!4m5!3m4!1s0x89d0819cc771239f:0xa7f3bfb814d11e6e!8m2!3d42.440872!4d-76.498802" title="map and directions to Pastimes">Map and Directions</a></p>
               </div>
               <div>
                 <strong>Hours:</strong>
-                    <p>Monday - Saturday: 10:00-5:30<br />Sunday (December only): 11:00-3:00</p>
+                    <p>Monday - Friday: 10:30 AM - 6:00 PM<br />Saturday: 11:00 AM - 5:30 PM<br />Sunday (December only): 11:00 AM - 3:00 PM</p>
               </div>
               <div>
             <a id="contact"></a>
-            <h2>Contact:</h2>
-                <p> We welcome your comments and questions! Please feel free to <a href="mailto:mail@pastimes.com?subject=Contacting Pastimes&nbsp;Antiques via Web Site&body=Thanks for contacting Pastimes Antiques!">contact us by email</a>
-                    or call us during business hours at (607)-277-3457.</p>
+            <strong>Contact:</strong>
+                <p>Email: <a href="mailto:mail@pastimes.com?subject=Contacting Pastimes&nbsp;Antiques via Web Site&body=Thanks for contacting Pastimes Antiques!">mail@pastimes.com</a><br />
+                  Phone: (607)-277-3457</p>
 
                 <a href="https://www.facebook.com/PastimesIthaca/" title="go to Pastimes on Facebook" ><img src="{{ site.baseurl }}/assets/img/facebook-20.png" alt="facebook icon">&nbsp;Visit our Facebook page.</a>
 
@@ -113,18 +114,22 @@
        -->
 
       <!-- Content Row -->
-          <a id="buying"></a>
-          <h2 class="card-title">Buying</h2>
-          {% include buying.html %}
+      <div class="row my-5">
+          <div class="col-lg-4">
+            <a id="buying"></a>
+            <h2 class="card-title">We Buy</h2>
+            {% include buying.html %}
+          </div>
         <!-- /.col-md-4 -->
 
       <!-- /.row -->
 
 
-      <div class="mt-3">
+      <div class="col-lg-8">
         <a id="gallery"></a>
         <h2>Gallery</h2>
         {% include image-gallery.html folder="/assets/pastimes-photos/original" %}
+      </div>
       </div>
 
     </div>
