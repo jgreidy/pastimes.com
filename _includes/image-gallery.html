@@ -17,8 +17,8 @@
         {% assign filename = filenameparts | last | replace: file.extname,"" %}
         {% assign tumbnail = file.path | replace: "original", "w300square" %}
 
-        <a href="{{ file.path }}" title="{{ filename }}">
-          <img src="{{ tumbnail }}" alt="{{ filename }}" />
+        <a href="{{ site.baseurl }}/{{ file.path }}" title="{{ filename }}">
+          <img src="{{ site.baseurl }}/{{ tumbnail }}" alt="{{ filename }}" />
         </a>
       {% endif %}
     {% endif %}
