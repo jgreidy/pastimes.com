@@ -53,4 +53,6 @@ exclude: [ README.md, CHANGELOG.md, docs, example, RUNNING.md,
 categories, posts, sync-server.sh, README-OLD.md, images/original,
 Rakefile, jekyll-theme-so-simple.gemspec, Gemfile, Gemfile.lock,
 package.json, screenshot.png, screenshots.jpg, banner.js,
-sync-events.sh, node_modules ]
+sync-events.sh, node_modules, package-lock.json, about, jekyll ]
+
+include: ['index.php']
