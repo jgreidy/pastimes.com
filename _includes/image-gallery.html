@@ -11,7 +11,7 @@
 {% endif %}
 
 <div class="image-gallery">
-  {% for file in site.static_files %}
+  {% for file in site.static_files reversed %}
     {% if file.path contains include.folder %}
       {% if file.extname == '.jpg' or
         file.extname == '.jpeg' or
