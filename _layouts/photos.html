@@ -39,11 +39,15 @@
         .imgbox {
             display: grid;
             height: 100%;
+            margin-top: -16px;
         }
         .center-fit {
             max-width: 100%;
-            max-height: 80vh;
             margin: auto;
+        }
+        .picture-full {
+          object-position: center top;
+          object-fit: contain;
         }
     </style>
 
@@ -71,10 +75,14 @@
       </nav>
     {% assign filepathv = site.baseurl | append: "/assets/pastimes-photos/original/" | append: page.filename %}
     {% assign filenamev = page.title %}
+    <div class="container">
     <div class="row">
-      <div class="col-lg-12">
-        {% include img-full.html filepath=filepathv filename=filenamev %}
+      <div class="span4"></div>
+      <div class="span4">
+      {% include picture-full.html filepath=filepathv filename=filenamev %}
       </div>
+      <div class="span4"></div>
+    </div>
     </div>
   </body>
 

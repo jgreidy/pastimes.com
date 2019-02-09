@@ -64,3 +64,8 @@ Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework 
 ## Copyright and License
 
 Copyright 2013-2018 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-small-business/blob/gh-pages/LICENSE) license.
+
+export photos max wid 1536 quality medium
+update data/photos.csv
+remove files in _photos
+bundle exec rake wax:pagemaster photos
