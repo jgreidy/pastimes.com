@@ -15,5 +15,7 @@
   {% assign srcsets = srcsets | concat: srcset %}
 {% endfor %}
 <div class="imgbox">
-<img class="center-fit" srcset="{{ srcsets | join: ', ' }}" src="{{ include.filepath }}" alt="{{ include.filename }}">
+<img class="center-fit" srcset="{{ srcsets | join: ', ' }}"
+sizes="(max-width: 320px) 300px, (max-width: 395) 375px, (max-width: 600px) 450px, (max-width: 875px) 800px, 960px"
+src="{{ include.filepath }}" alt="{{ include.filename }}">
 </div>
