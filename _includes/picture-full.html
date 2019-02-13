@@ -14,6 +14,7 @@
     {% assign path = include.filepath | replace: "original", dir %}
     <source srcset="{{ path }}" media="(max-width: {{ size }}px)">
   {% endfor %}
+    <source srcset="{{ include.filepath }}">
   <img class="center-fit" src="{{ include.filepath }}" >
 </picture>
 </div>
