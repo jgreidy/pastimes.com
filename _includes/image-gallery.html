@@ -15,7 +15,7 @@
     {% assign page_path = baseurl | append: "/photos/" | append: photo.pid | append: ".html" %}
     {% assign image_path = baseurl | append: "/assets/pastimes-photos/original/" | append: photo.filename %}
     <a class="thumbnail" href="{{ page_path }}">
-        {% include simple-thumb.html filepath=image_path filename=photo.title %}
+        {% include picture-thumb.html filepath=image_path filename=photo.title %}
     </a>
   {% endfor %}
   </div>

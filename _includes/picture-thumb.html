@@ -12,7 +12,9 @@
   {% for size in sizes %}
     {% assign dir = "square" | append: size %}
     {% assign path = include.filepath | replace: "original", dir %}
-    <source srcset="{{ path }}" media="(max-width: {{ size }}px)">
+    {% assign vpsize = size | times: 5 %}
+    <source srcset="{{ path }}" media="(max-width: {{ vpsize }}px)">
   {% endfor %}
+  <source srcset="{{ srcimage }}">
   <img src="{{ srcimage }}" >
 </picture>

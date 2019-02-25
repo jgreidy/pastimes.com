@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="html-max-fit" lang="en">
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133308303-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-133308303-1');
+    </script>
+
+    {% assign filepathv = site.baseurl | append: "/assets/pastimes-photos/original/" | append: page.filename %}
+    {% assign filenamev = page.title %}
+    {% assign sizes = "300,375,450,800,960" | split: "," %}
+    {% assign smallest = filepathv | replace: "original", "w300" %}
+
+    <style>
+      html {
+        min-height:100%;/* make sure it is at least as tall as the viewport */
+        position:relative;
+      }
+      body {
+        height:100%; /* force the BODY element to match the height of the HTML element */
+      }
+      .image-well {
+        background-repeat: no-repeat;
+        background-image: url('{{ filepathv }}');
+        background-position: center center;
+        background-size: contain;
+        padding-top: 0px;
+      }
+      {% assign lastWid = "0" %}
+      {% for size in sizes %}
+        {% assign lastSize = lastWid | plus: 1 %}
+        {% assign dir = "w" | append: size %}
+        {% assign path = filepathv | replace: "original", dir %}
+        @media only screen and (max-width: {{ size }}px) and (min-width: {{ lastSize }}px) {
+          .image-well {
+            background-image: url('{{ path }}');
+          }
+        }
+        {% assign lastWid = size %}
+      {% endfor %}
+    </style>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="description" content="">
+   <meta name="author" content="">
+
+   <title>{{ page.title }}</title>
+
+   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+    <link href='//fonts.googleapis.com/css?family=ZCOOL+XiaoWei:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Montserrat:400,300,700' rel='stylesheet' type='text/css'>
+
+   {% include json-ld.html %}
+
+   <!-- Bootstrap core CSS -->
+   <link href="{{ site.baseurl }}/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+   <!-- Custom styles for this template -->
+   <link href="{{ site.baseurl }}/css/small-business.css" rel="stylesheet">
+ </head>
+
+  <body class="image-well">
+     <nav aria-label="Image navigation">
+        <ul class="pagination justify-content-center">
+        {% if page.previous_pid > "0" %}
+          {% assign prev = page.url | replace: page.pid, page.previous_pid %}
+          <li class="page-item"><a class="page-link" href="{{ prev }}">&laquo;</a></li>
+        {% else %}
+          <li class="page-item disabled"><a class="page-link" href="#">&laquo;</a></li>
+        {% endif %}
+        <li class="page-item"><a class="page-link" href="{{ site.baseurl }}/index.html#gallery">Pastimes</a></a></li>
+        {% if page.next_pid > "0" %}
+          {% assign next = page.url | replace: page.pid, page.next_pid %}
+          <li class="page-item"><a class="page-link" href="{{ next }}">&raquo;</a></li>
+        {% else %}
+          <li class="page-item disabled"><a class="page-link" href="#">&raquo;</a></li>
+        {% endif %}
+        </ul>
+      </nav>
+  </body>
+</html>
