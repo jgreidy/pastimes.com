@@ -7,6 +7,7 @@
   */
 {% endcomment %}
 {% assign sizes = "300,375,450,800,960" | split: "," %}
+{% comment %}
 <div class="imgbox">
 <picture>
   {% for size in sizes %}
@@ -15,6 +16,8 @@
     <source srcset="{{ path }}" media="(max-width: {{ size }}px)">
   {% endfor %}
     <source srcset="{{ include.filepath }}">
-  <img class="center-fit" src="{{ include.filepath }}" >
+  <img class="max-fit" src="{{ include.filepath }}" >
 </picture>
 </div>
+{% endcomment %}
+<img class="mh-75" src="{{ include.filepath }}" >
