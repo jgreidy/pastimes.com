@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="html-max-fit" lang="en">
 
   <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -11,6 +11,21 @@
 
       gtag('config', 'UA-133308303-1');
     </script>
+
+    <style>
+        html, body {margin:0;padding:0;height:100%}
+        .html-max-fit {
+          height:100%;/* make sure it is at least as tall as the viewport */
+          position:relative;
+        }
+        .body-max-fit {
+          min-height:100%; /* force the BODY element to match the height of the HTML element */
+        }
+        img #max-fit {
+          max-width: 100%;
+          max-height: 100%;
+        }
+  </style>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -49,11 +64,12 @@
           object-position: center top;
           object-fit: contain;
         }
+
     </style>
 
   </head>
 
-  <body>
+  <body class="body-max-fit">
     {% include navigation.html %}
 
     {{ content }}
@@ -75,7 +91,7 @@
       </nav>
     {% assign filepathv = site.baseurl | append: "/assets/pastimes-photos/original/" | append: page.filename %}
     {% assign filenamev = page.title %}
-    <div class="container">
+    <div class="container h-75">
     <div class="row">
       <div class="span4"></div>
       <div class="span4">
