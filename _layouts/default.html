@@ -2,6 +2,15 @@
 <html lang="en">
 
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133308303-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-133308303-1');
+    </script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -35,32 +44,7 @@
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
-        <a class="navbar-brand pastimes-brand" href="#">Pastimes</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Home
-              </a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="{{ site.baseurl }}/#contact">Contact</a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="{{ site.baseurl }}/#buying">We Buy</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="{{ site.baseurl }}/#gallery">Gallery</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    {% include navigation.html %}
 
     <!-- Page Content -->
     <div class="container">
@@ -68,7 +52,7 @@
       <!-- Heading Row -->
       <div class="row my-5">
         <!-- /.col-lg-8 -->
-        <div class="col-lg-4">
+        <div class="col-lg-5">
           <h1 class="pastimes-brand">Pastimes</h1>
           <p>Pastimes is a small, colorful shop packed with an ever-changing array of useful and beautiful vintage and antique items.</p>
           <p>We specialize in antique and vintage jewelry, clothing, art, textiles, ephemera, and early postcards. We also carry early buttons, beads, antique photographs, silver, pins and medals, vinyl records, toys, furniture, glassware, other household items, and various unexpected oddments and curiosities.</p>
@@ -99,8 +83,8 @@
               </div>
             </div>
         <!-- /.col-md-4 -->
-        <div class="col-lg-8">
-            {% include im-musicians.html %}
+        <div class="col-lg-7">
+            {% include im-store.html %}
         </div>
       </div>
       <!-- /.row -->
@@ -116,7 +100,7 @@
 
       <!-- Content Row -->
       <div class="row my-5">
-          <div class="col-lg-4">
+          <div class="col-lg-5">
             <a id="buying"></a>
             <h2 class="card-title">We Buy</h2>
             {% include buying.html %}
@@ -126,7 +110,7 @@
       <!-- /.row -->
 
 
-      <div class="col-lg-8">
+      <div class="col-lg-7">
         <a id="gallery"></a>
         <h2>Gallery</h2>
         {% include image-gallery.html folder="/assets/pastimes-photos/original" %}

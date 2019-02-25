@@ -1,0 +1,20 @@
+{% comment %}
+/**
+  filename
+  filepath
+  thumb sizes wids=(63 102 122 300) square63
+  full sizes wids=(300 375 450 800 960) w300
+  */
+{% endcomment %}
+{% assign sizes = "63,102,122" | split: "," %}
+{% assign srcimage = include.filepath | replace: "original", "square300" %}
+<picture>
+  {% for size in sizes %}
+    {% assign dir = "square" | append: size %}
+    {% assign path = include.filepath | replace: "original", dir %}
+    {% assign vpsize = size | times: 5 %}
+    <source srcset="{{ path }}" media="(max-width: {{ vpsize }}px)">
+  {% endfor %}
+  <source srcset="{{ srcimage }}">
+  <img src="{{ srcimage }}" >
+</picture>

@@ -1,0 +1,21 @@
+{% comment %}
+/**
+  filename
+  filepath
+  thumb sizes wids=(63 102 122 300) square63
+  full sizes wids=(300 375 450 800 960) w300
+  */
+{% endcomment %}
+{% assign sizes = "300,375,450,800,960" | split: "," %}
+{% assign srcsets = [] %}
+{% for size in sizes %}
+  {% assign dir = "w" | append: size %}
+  {% assign path = include.filepath | replace: "original", dir %}
+  {% assign srcset = path | append: " " | append: size | append: "w" | split: "|" %}
+  {% assign srcsets = srcsets | concat: srcset %}
+{% endfor %}
+<div class="imgbox">
+<img class="center-fit" srcset="{{ srcsets | join: ', ' }}"
+sizes="(max-width: 320px) 300px, (max-width: 395) 375px, (max-width: 600px) 450px, (max-width: 875px) 800px, 960px"
+src="{{ include.filepath }}" alt="{{ include.filename }}">
+</div>

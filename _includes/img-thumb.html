@@ -1,0 +1,18 @@
+{% comment %}
+/**
+  filename
+  filepath
+  thumb sizes wids=(63 102 122 300) square63
+  full sizes wids=(300 375 450 800 960) w300
+  */
+{% endcomment %}
+{% assign sizes = "63,102,122,300" | split: "," %}
+{% assign srcsets = [] %}
+{% for size in sizes %}
+  {% assign dir = "square" | append: size %}
+  {% assign path = include.filepath | replace: "original", dir %}
+  {% assign srcset = path | append: " " | append: size | append: "w" | split: "|" %}
+  {% assign srcsets = srcsets | concat: srcset %}
+{% endfor %}
+{% assign srcimage = include.filepath | replace: "original", "square300" %}
+<img srcset="{{ srcsets | join: ', ' }}" src="{{ srcimage }}" alt="{{ include.filename }}">

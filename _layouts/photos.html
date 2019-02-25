@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="html-max-fit" lang="en">
+
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133308303-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-133308303-1');
+    </script>
+
+    <style>
+        html, body {margin:0;padding:0;height:100%}
+        .html-max-fit {
+          height:100%;/* make sure it is at least as tall as the viewport */
+          position:relative;
+        }
+        .body-max-fit {
+          min-height:100%; /* force the BODY element to match the height of the HTML element */
+        }
+        img #max-fit {
+          max-width: 100%;
+          max-height: 100%;
+        }
+  </style>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>{{ page.title }}</title>
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css">
+     <link href='//fonts.googleapis.com/css?family=ZCOOL+XiaoWei:400,300,700' rel='stylesheet' type='text/css'>
+     <link href='//fonts.googleapis.com/css?family=Montserrat:400,300,700' rel='stylesheet' type='text/css'>
+
+    {% include json-ld.html %}
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ site.baseurl }}/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ site.baseurl }}/css/small-business.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+            margin-top: -16px;
+        }
+        .center-fit {
+            max-width: 100%;
+            margin: auto;
+        }
+        .picture-full {
+          object-position: center top;
+          object-fit: contain;
+        }
+
+    </style>
+
+  </head>
+
+  <body class="body-max-fit">
+    {% include navigation.html %}
+
+    {{ content }}
+    <nav aria-label="Image navigation">
+        <ul class="pagination justify-content-center">
+        {% if page.previous_pid > "0" %}
+          {% assign prev = page.url | replace: page.pid, page.previous_pid %}
+          <li class="page-item"><a class="page-link" href="{{ prev }}">Previous</a></li>
+        {% else %}
+          <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+        {% endif %}
+        {% if page.next_pid > "0" %}
+          {% assign next = page.url | replace: page.pid, page.next_pid %}
+          <li class="page-item"><a class="page-link" href="{{ next }}">Next</a></li>
+        {% else %}
+          <li class="page-item disabled"><a class="page-link" href="#">Next</a></li>
+        {% endif %}
+        </ul>
+      </nav>
+    {% assign filepathv = site.baseurl | append: "/assets/pastimes-photos/original/" | append: page.filename %}
+    {% assign filenamev = page.title %}
+    <div class="container h-75">
+    <div class="row">
+      <div class="span4"></div>
+      <div class="span4">
+      {% include picture-full.html filepath=filepathv filename=filenamev %}
+      </div>
+      <div class="span4"></div>
+    </div>
+    </div>
+  </body>
+
+  </html>
