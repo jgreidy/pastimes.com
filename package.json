@@ -27,12 +27,12 @@
     },
     "dependencies": {
         "bootstrap": "^4.3.1",
-        "jquery": "3.3.1",
+        "jquery": ">=3.4.0",
         "lodash": ">=4.17.5",
-        "popper.js": "^1.14.7"
+        "popper.js": "^1.15.0"
     },
     "devDependencies": {
-        "browser-sync": "^2.26.3",
-        "gulp": "^4.0.0"
+        "browser-sync": "^2.26.5",
+        "gulp": "^4.0.1"
     }
 }
