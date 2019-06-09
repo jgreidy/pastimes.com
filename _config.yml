@@ -17,8 +17,8 @@ title: Pastimes Antiques
 email: mail@pastimes.com
 description: >- # this means to ignore newlines until "baseurl:"
   Ithaca's Fun and Affordable Antique Shop, est. 1979
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://pastimes.com" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/~pastimes" # the subpath of your site, e.g. /blog
+url: "http://143.95.228.87" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  jgreidy
 
 # Build settings
@@ -60,6 +60,6 @@ categories, posts, sync-server.sh, README-OLD.md, images/original,
 Rakefile, jekyll-theme-so-simple.gemspec, Gemfile, Gemfile.lock,
 package.json, screenshot.png, screenshots.jpg, banner.js,
 sync-events.sh, node_modules, package-lock.json, jekyll, sendetail.php,
-LICENSE, test.html ]
+LICENSE, test.html, sync-server.sh ]
 
 include: ['index.php' ]
