@@ -13,3 +13,16 @@ Header set Cache-Control "max-age=2628000, public"
 </filesMatch>
 
 ErrorDocument 404 /404.html
+
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^index\.php$ "http\:\/\/pastimes\.com\/index\.html" [R=301,L]
+RewriteRule ^about_us\.php$ "http\:\/\/pastimes\.com\/index\.html" [R=301,L]
+RewriteRule ^buy_sell\.php$ "http\:\/\/pastimes\.com\/index\.html" [R=301,L]
+RewriteRule ^contact_us\.php$ "http\:\/\/pastimes\.com\/index\.html" [R=301,L]
+RewriteRule ^fb-button\.php$ "http\:\/\/pastimes\.com\/index\.html" [R=301,L]
+RewriteRule ^footer\.php$ "http\:\/\/pastimes\.com\/index\.html" [R=301,L]
+RewriteRule ^header\.php$ "http\:\/\/pastimes\.com\/index\.html" [R=301,L]
+RewriteRule ^history\.php$ "http\:\/\/pastimes\.com\/index\.html" [R=301,L]
+RewriteRule ^links\.php$ "http\:\/\/pastimes\.com\/index\.html" [R=301,L]
+RewriteRule ^sendetail\.php$ "http\:\/\/pastimes\.com\/index\.html" [R=301,L]
+RewriteRule ^services\.php$ "http\:\/\/pastimes\.com\/index\.html" [R=301,L]
