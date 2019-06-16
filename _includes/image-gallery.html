@@ -5,10 +5,7 @@
   .image-gallery a img {width: 100%; display: block;}
 </style>
 
-{% assign baseurl = site.baseurl %}
-{% if site.baseurl.size > 0 %}
-  {% assign baseurl = baseurl | append : "/" %}
-{% endif %}
+{% assign baseurl = site.url | append: site.baseurl %}
 
 <div class="image-gallery">
   {% for photo in site.photos %}
