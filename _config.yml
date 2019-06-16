@@ -61,5 +61,3 @@ Rakefile, jekyll-theme-so-simple.gemspec, Gemfile, Gemfile.lock,
 package.json, screenshot.png, screenshots.jpg, banner.js,
 sync-events.sh, node_modules, package-lock.json, jekyll, sendetail.php,
 LICENSE, test.html, sync-server.sh ]
-
-include: ['index.php' ]
