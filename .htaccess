@@ -11,5 +11,3 @@ Header set Cache-Control "max-age=31536000, public"
 <filesMatch ".(css|js)$">
 Header set Cache-Control "max-age=2628000, public"
 </filesMatch>
-
-ErrorDocument 404 /404.html
