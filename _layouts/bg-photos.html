@@ -68,15 +68,16 @@
   <body class="image-well">
      <nav aria-label="Image navigation">
         <ul class="pagination justify-content-center">
+        {% assign baseurl = site.url | append: site.baseurl %}
         {% if page.previous_pid > "0" %}
-          {% assign prev = page.url | replace: page.pid, page.previous_pid %}
+          {% assign prev = page.url | prepend: baseurl | replace: page.pid, page.previous_pid %}
           <li class="page-item"><a class="page-link" href="{{ prev }}">&laquo;</a></li>
         {% else %}
           <li class="page-item disabled"><a class="page-link" href="#">&laquo;</a></li>
         {% endif %}
         <li class="page-item"><a class="page-link" href="{{ site.baseurl }}/index.html#gallery">Pastimes</a></a></li>
         {% if page.next_pid > "0" %}
-          {% assign next = page.url | replace: page.pid, page.next_pid %}
+          {% assign next = page.url | prepend: baseurl | replace: page.pid, page.next_pid %}
           <li class="page-item"><a class="page-link" href="{{ next }}">&raquo;</a></li>
         {% else %}
           <li class="page-item disabled"><a class="page-link" href="#">&raquo;</a></li>

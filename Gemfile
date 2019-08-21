@@ -31,8 +31,5 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 #enable github pages
 gem 'github-pages', group: :jekyll_plugins
 
-#redirects
-gem 'jekyll-redirect-from'
-
 #pagemaster
 gem 'wax_tasks'
