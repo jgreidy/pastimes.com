@@ -17,6 +17,9 @@ title: Pastimes Antiques
 email: mail@pastimes.com
 description: >- # this means to ignore newlines until "baseurl:"
   Ithaca's Fun and Affordable Antique Shop, est. 1979
+
+# github pages baseurl should be "pastimes.com"
+# server baseurl should be ""
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://pastimes.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  jgreidy
